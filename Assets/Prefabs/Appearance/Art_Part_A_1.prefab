@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4835102953184158}
+  - component: {fileID: 54576061710589578}
   m_Layer: 0
   m_Name: Art_Part_A_1
   m_TagString: Untagged
@@ -36,7 +37,6 @@ GameObject:
   - component: {fileID: 4166120578367518}
   - component: {fileID: 33706856399270982}
   - component: {fileID: 23449861762659912}
-  - component: {fileID: 54924317289648718}
   - component: {fileID: 136258885860858328}
   m_Layer: 0
   m_Name: Capsule
@@ -110,16 +110,16 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1441482524313504}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54924317289648718
+--- !u!54 &54576061710589578
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1441482524313504}
+  m_GameObject: {fileID: 1435374039140588}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 0.1
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
