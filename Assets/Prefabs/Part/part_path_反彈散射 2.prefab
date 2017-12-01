@@ -64,7 +64,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc8010eb7442cc48b7ffc44dcc361e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 0}
   appearance: {fileID: 0}
   trigger: {fileID: 65499299621503790}
   hardness: 0
   atom: {fileID: 11400000, guid: 93fae278466434343adc5c4949877899, type: 2}
+  atoms:
+  - {fileID: 11400000, guid: 93fae278466434343adc5c4949877899, type: 2}
