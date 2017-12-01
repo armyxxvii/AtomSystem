@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114810324785965642}
   - component: {fileID: 65499299621503790}
   m_Layer: 0
-  m_Name: "part_path_\u53CD\u5F48\u6563\u5C04 1"
+  m_Name: "part_\u4F4D\u79FB_\u53CD\u5F48\u6563\u5C04_\u4E0A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,5 +70,5 @@ MonoBehaviour:
   hardness: 0
   atom: {fileID: 0}
   atoms:
-  - {fileID: 11400000, guid: 2aba71e17671e814f8c3504786a1b61e, type: 2}
+  - {fileID: 0}
   setting: []
