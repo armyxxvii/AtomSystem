@@ -26,8 +26,9 @@ public class ItemPart : MonoBehaviour
     [Header ("硬度")]
     [Range (0, 99)] public int hardness;
 
-    [Header ("成分")]
-    public Atom atom;
-    public List<Atom> atoms;
+	[Header ("成分")]
+	public Atom atom;
+	public List<Atom> atoms;
+	public List<string> setting;
 
 }
