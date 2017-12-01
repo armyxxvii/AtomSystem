@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4491567906181110}
   - component: {fileID: 114691120599733922}
   m_Layer: 0
-  m_Name: "item002_\u98DB\u5200"
+  m_Name: "item014_\u96FB\u7DB2\u9677\u9631"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,12 +58,12 @@ MonoBehaviour:
     hideChild: 0
     childIds: 00000000
   partNodes:
-  - part: {fileID: 114810324785965642, guid: 180b38c92c08cee4086780ef998bba63, type: 2}
+  - part: {fileID: 114176065614138656, guid: 1b7668a12f1d7184f9ec73b1f9aaa76d, type: 2}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     hideChild: 0
-    childIds: 01000000
-  - part: {fileID: 114810324785965642, guid: 7c86ed302dce7fd4c819c05f3162cfd5, type: 2}
+    childIds: 
+  - part: {fileID: 114810324785965642, guid: 67a541fcbd6e58f4b999a0cddfe96ff0, type: 2}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     hideChild: 0

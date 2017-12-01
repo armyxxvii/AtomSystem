@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4983769896548386}
   - component: {fileID: 114176065614138656}
-  - component: {fileID: 136576981643073956}
+  - component: {fileID: 135095268145548966}
   m_Layer: 0
-  m_Name: Part_B_1
+  m_Name: "part_\u5674\u706B\u5668"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,18 +53,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  appearance: {fileID: 1435374039140588, guid: 12e3fa1ae3cfa3a418316e87f3b52ec8, type: 2}
-  trigger: {fileID: 136576981643073956}
+  appearance: {fileID: 1435374039140588, guid: d52df9e499569594a8b7676b131445a4, type: 2}
+  trigger: {fileID: 135095268145548966}
   hardness: 0
   atom: {fileID: 0}
   atoms:
-  - {fileID: 11400000, guid: 1f2bf7412ae134a4b9970d82bd766c4e, type: 2}
-  - {fileID: 11400000, guid: 88dab91ae79f22846a2790dfa498f3f2, type: 2}
-  setting:
-  - 
-  - 
---- !u!136 &136576981643073956
-CapsuleCollider:
+  - {fileID: 11400000, guid: 41746639531b87a41b5256e7108f3ecb, type: 2}
+  - {fileID: 11400000, guid: 9778971fe4f822b4c9c4190ced90956a, type: 2}
+  setting: []
+--- !u!135 &135095268145548966
+SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -72,7 +70,6 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
+  serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

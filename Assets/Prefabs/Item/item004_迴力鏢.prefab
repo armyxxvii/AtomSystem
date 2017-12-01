@@ -53,15 +53,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rootNode:
     part: {fileID: 0}
-    parentId: 0
-    hideChild: 1
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    hideChild: 0
     childIds: 00000000
   partNodes:
   - part: {fileID: 114810324785965642, guid: 0ca3c26eefe978b4889b5131f2c2383d, type: 2}
-    parentId: -1
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
     hideChild: 0
     childIds: 
   - part: {fileID: 114810324785965642, guid: ba0d56671ba35254699aff0d592da3b4, type: 2}
-    parentId: -1
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
     hideChild: 0
     childIds: 
