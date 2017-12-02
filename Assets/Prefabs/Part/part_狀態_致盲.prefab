@@ -70,5 +70,6 @@ MonoBehaviour:
   hardness: 0
   atom: {fileID: 0}
   atoms:
-  - {fileID: 0}
-  setting: []
+  - {fileID: 11400000, guid: 4475b964ff3c1de4a952bc341c370158, type: 2}
+  setting:
+  - "\u72C0\u614B_\u81F4\u76F2"

@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4321300681424360}
   - component: {fileID: 114810324785965642}
-  - component: {fileID: 65499299621503790}
+  - component: {fileID: 135376828192051392}
   m_Layer: 0
   m_Name: "part_\u73FE\u6709HP\u8B8A\u5316_\u7BC4\u570D\u7206\u70B8"
   m_TagString: Untagged
@@ -41,18 +41,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &65499299621503790
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1843595352416050}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3, y: 3, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114810324785965642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,9 +54,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   appearance: {fileID: 1400376329031386, guid: d2d1808f6bd500545876a7a83525971b, type: 2}
-  trigger: {fileID: 65499299621503790}
+  trigger: {fileID: 135376828192051392}
   hardness: 0
   atom: {fileID: 0}
   atoms:
   - {fileID: 11400000, guid: 41746639531b87a41b5256e7108f3ecb, type: 2}
   setting: []
+--- !u!135 &135376828192051392
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843595352416050}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}

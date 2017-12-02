@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Transparent_Red
+  m_Name: Transparent_Green
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _ALPHABLEND_ON _EMISSION _SPECULARHIGHLIGHTS_OFF
+  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: 3000
   stringTagMap:
@@ -100,7 +100,7 @@ Material:
       second: 0.41
     - first:
         name: _Mode
-      second: 2
+      second: 3
     - first:
         name: _OcclusionStrength
       second: 1
@@ -115,7 +115,7 @@ Material:
       second: 1
     - first:
         name: _SrcBlend
-      second: 5
+      second: 1
     - first:
         name: _UVSec
       second: 0
@@ -125,10 +125,10 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.40900004, g: 0, b: 0, a: 0.634}
+      second: {r: 0, g: 0.34117648, b: 0.14117648, a: 0.634}
     - first:
         name: _EmissionColor
-      second: {r: 0.443, g: 0, b: 0, a: 1}
+      second: {r: 0, g: 0.34, b: 0.14211999, a: 1}
     - first:
         name: _TintColor
       second: {r: 0.5, g: 0, b: 0, a: 0.153}
