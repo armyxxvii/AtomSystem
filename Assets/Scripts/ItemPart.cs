@@ -26,6 +26,13 @@ namespace AtomSystem
                 trigger = GetComponent<Collider> ();
             }
         }
+        public void DestroySelf ()
+        {
+            if (item)
+                item.DestroyPart (this);
+            else
+                Destroy (gameObject);
+        }
 
 //        static List<int[]> reactions = new List<int[]> ();
         public void OnTriggerEnter (Collider c)
@@ -49,8 +56,8 @@ namespace AtomSystem
                     }
                 }
                 if (destroyFlag) {
-                    Debug.Log ("<color=orange>Break " + name + "</color>\n" + part_B.name);
-                    item.DestroyPart (this);
+                    Debug.Log ("Break <color=orange>" + name + "</color> by " + part_B.name + "\n");
+                    DestroySelf ();
                 }
             }
         }
