@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4491567906181110}
   - component: {fileID: 114691120599733922}
   m_Layer: 0
-  m_Name: "item002_\u98DB\u5200"
+  m_Name: "item003_\u53CD\u5F48\u98DB\u5200 1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,13 +33,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1826001071360094}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: -7.81, y: -0.31519997, z: 0}
+  m_LocalRotation: {x: 0.18301274, y: 0.6830127, z: -0.18301274, w: 0.6830127}
+  m_LocalPosition: {x: 0, y: 1.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 30, y: 90, z: 0}
 --- !u!114 &114691120599733922
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,16 +70,40 @@ MonoBehaviour:
     app_Instance: {fileID: 0}
     parentId: 0
     hideChild: 1
-    childIds: 02000000
-  - part: {fileID: 114810324785965642, guid: 7c86ed302dce7fd4c819c05f3162cfd5, type: 2}
+    childIds: 020000000400000006000000
+  - part: {fileID: 114810324785965642, guid: 1bb83034c80229f4e91f638ed086e86b, type: 2}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
-    parentId: 1
-    hideChild: 1
+    parentId: 0
+    hideChild: 0
     childIds: 03000000
   - part: {fileID: 114810324785965642, guid: 7c86ed302dce7fd4c819c05f3162cfd5, type: 2}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
-    parentId: 2
+    parentId: 0
+    hideChild: 0
+    childIds: 
+  - part: {fileID: 114810324785965642, guid: ed12b4b4adbf2724d8228a1d98e7ae99, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 0
+    hideChild: 0
+    childIds: 05000000
+  - part: {fileID: 114810324785965642, guid: 7c86ed302dce7fd4c819c05f3162cfd5, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 0
+    hideChild: 0
+    childIds: 
+  - part: {fileID: 114810324785965642, guid: 66ded53191460cf44a40da7a34e60495, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 0
+    hideChild: 0
+    childIds: 07000000
+  - part: {fileID: 114810324785965642, guid: 7c86ed302dce7fd4c819c05f3162cfd5, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 0
     hideChild: 0
     childIds: 

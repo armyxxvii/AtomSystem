@@ -21,8 +21,11 @@ GameObject:
   - component: {fileID: 4321300681424360}
   - component: {fileID: 114810324785965642}
   - component: {fileID: 65499299621503790}
+  - component: {fileID: 111613391847938070}
+  - component: {fileID: 54555889543134612}
+  - component: {fileID: 75052189149905576}
   m_Layer: 0
-  m_Name: "part_\u4F4D\u79FB_\u53CD\u5F48\u6563\u5C04_\u5DE6\u4E0B"
+  m_Name: "part_\u4F4D\u79FB_\u53CD\u5F48\u6563\u5C041"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,6 +44,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54555889543134612
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843595352416050}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &65499299621503790
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -51,8 +69,34 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!75 &75052189149905576
+ConstantForce:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843595352416050}
+  m_Enabled: 1
+  m_Force: {x: 0, y: 12, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: -19}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}
+--- !u!111 &111613391847938070
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843595352416050}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 994db96943b647a4f9e6d2a7db8a4f13, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 994db96943b647a4f9e6d2a7db8a4f13, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114810324785965642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -65,10 +109,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  appearance: {fileID: 1435374039140588, guid: 2bbc56cb69e172c449f7620ede9d1def, type: 2}
+  appearance: {fileID: 1435374039140588, guid: ed89df51934d4d64d897bc19f3bee003, type: 2}
+  cols: []
   trigger: {fileID: 65499299621503790}
-  hardness: 0
-  atom: {fileID: 0}
   atoms:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 775fc42e7fb3e6b4995316877d4cc6a4, type: 2}
   setting: []
+  childs: []

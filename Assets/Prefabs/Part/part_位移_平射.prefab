@@ -21,6 +21,10 @@ GameObject:
   - component: {fileID: 4321300681424360}
   - component: {fileID: 114810324785965642}
   - component: {fileID: 65499299621503790}
+  - component: {fileID: 135882206215922782}
+  - component: {fileID: 54700256797333832}
+  - component: {fileID: 75994649893008792}
+  - component: {fileID: 95950331891340296}
   m_Layer: 0
   m_Name: "part_\u4F4D\u79FB_\u5E73\u5C04"
   m_TagString: Untagged
@@ -41,6 +45,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54700256797333832
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843595352416050}
+  serializedVersion: 2
+  m_Mass: 0.2
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!65 &65499299621503790
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -49,10 +68,38 @@ BoxCollider:
   m_GameObject: {fileID: 1843595352416050}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.05, y: 0.05, z: 0.01}
+  m_Center: {x: 0, y: 0, z: 0.06}
+--- !u!75 &75994649893008792
+ConstantForce:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843595352416050}
+  m_Enabled: 0
+  m_Force: {x: 0, y: 0, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 7}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}
+--- !u!95 &95950331891340296
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843595352416050}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 37d3841cf84219f478b6fd49088524c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114810324785965642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -65,10 +112,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  appearance: {fileID: 1435374039140588, guid: 2bbc56cb69e172c449f7620ede9d1def, type: 2}
+  appearance: {fileID: 1435374039140588, guid: bac9799ea6ccac14fa38f02398d1c7e3, type: 2}
+  cols: []
   trigger: {fileID: 65499299621503790}
-  hardness: 0
-  atom: {fileID: 0}
   atoms:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 0bea6f0fa6b6dfb4b9d67177a6e2bd58, type: 2}
   setting: []
+  childs: []
+--- !u!135 &135882206215922782
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843595352416050}
+  m_Material: {fileID: 13400000, guid: 1de89d71275a5d948ae657f4d331224e, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.05
+  m_Center: {x: 0, y: 0, z: 0}
