@@ -1,16 +1,23 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace AtomSystem
+namespace CreAtom
 {
     [System.Serializable]
     public class PartNode
     {
+        public Vector3 Tpos;
+        public Vector3 Trot;
         public ItemPart part;
         public GameObject part_Instance;
         public GameObject app_Instance;
         public int parentId;
-        public bool hideChild;
-        public List<int> childIds;
+        public List<bool> childHides = new List<bool>();
+        public List<int> childIds = new List<int>();
+
+        public PartNode()
+        {
+            parentId = -1;
+        }
     }
 }

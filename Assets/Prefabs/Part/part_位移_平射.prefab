@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4321300681424360}
   - component: {fileID: 114810324785965642}
-  - component: {fileID: 65499299621503790}
   - component: {fileID: 135882206215922782}
   - component: {fileID: 54700256797333832}
   - component: {fileID: 75994649893008792}
@@ -52,7 +51,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1843595352416050}
   serializedVersion: 2
-  m_Mass: 0.2
+  m_Mass: 0.5
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -60,18 +59,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!65 &65499299621503790
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1843595352416050}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.05, y: 0.05, z: 0.01}
-  m_Center: {x: 0, y: 0, z: 0.06}
 --- !u!75 &75994649893008792
 ConstantForce:
   m_ObjectHideFlags: 1
@@ -80,7 +67,7 @@ ConstantForce:
   m_GameObject: {fileID: 1843595352416050}
   m_Enabled: 0
   m_Force: {x: 0, y: 0, z: 0}
-  m_RelativeForce: {x: 0, y: 0, z: 7}
+  m_RelativeForce: {x: 0, y: 0, z: 50}
   m_Torque: {x: 0, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!95 &95950331891340296
@@ -114,7 +101,7 @@ MonoBehaviour:
   item: {fileID: 0}
   appearance: {fileID: 1435374039140588, guid: bac9799ea6ccac14fa38f02398d1c7e3, type: 2}
   cols: []
-  trigger: {fileID: 65499299621503790}
+  trigger: {fileID: 0}
   atoms:
   - {fileID: 11400000, guid: 0bea6f0fa6b6dfb4b9d67177a6e2bd58, type: 2}
   setting: []

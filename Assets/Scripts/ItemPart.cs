@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-namespace AtomSystem
+namespace CreAtom
 {
     [RequireComponent (typeof(Collider))]
     public class ItemPart : MonoBehaviour
@@ -26,6 +26,7 @@ namespace AtomSystem
                 trigger = GetComponent<Collider> ();
             }
         }
+
         public void DestroySelf ()
         {
             if (item)
@@ -34,7 +35,7 @@ namespace AtomSystem
                 Destroy (gameObject);
         }
 
-//        static List<int[]> reactions = new List<int[]> ();
+        //        static List<int[]> reactions = new List<int[]> ();
         public void OnTriggerEnter (Collider c)
         {
             ItemPart part_B = c.gameObject.GetComponent<ItemPart> ();
@@ -56,7 +57,8 @@ namespace AtomSystem
                     }
                 }
                 if (destroyFlag) {
-                    Debug.Log ("Break <color=orange>" + name + "</color> by " + part_B.name + "\n");
+	                Debug.Log ("<color=red>" + name + "</color> was destroyed by " +
+                        "<color=orange>" + part_B.GetInstanceID () + " <" + part_B.name + "></color>\n");
                     DestroySelf ();
                 }
             }

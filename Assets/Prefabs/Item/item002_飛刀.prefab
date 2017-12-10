@@ -52,34 +52,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rootNode:
+    Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
     part: {fileID: 0}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: -1
-    hideChild: 0
+    childHides: 00
     childIds: 00000000
   partNodes:
-  - part: {fileID: 114810324785965642, guid: 180b38c92c08cee4086780ef998bba63, type: 2}
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: 180b38c92c08cee4086780ef998bba63, type: 2}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: -1
-    hideChild: 0
+    childHides: 00
     childIds: 01000000
-  - part: {fileID: 114810324785965642, guid: 7c86ed302dce7fd4c819c05f3162cfd5, type: 2}
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: 7c86ed302dce7fd4c819c05f3162cfd5, type: 2}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 0
-    hideChild: 1
+    childHides: 01
     childIds: 02000000
-  - part: {fileID: 114810324785965642, guid: 7c86ed302dce7fd4c819c05f3162cfd5, type: 2}
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: 7c86ed302dce7fd4c819c05f3162cfd5, type: 2}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 1
-    hideChild: 1
+    childHides: 01
     childIds: 03000000
-  - part: {fileID: 114810324785965642, guid: 7c86ed302dce7fd4c819c05f3162cfd5, type: 2}
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: 7c86ed302dce7fd4c819c05f3162cfd5, type: 2}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 2
-    hideChild: 0
+    childHides: 
     childIds: 

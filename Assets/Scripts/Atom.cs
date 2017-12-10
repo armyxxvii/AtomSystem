@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
 
-namespace AtomSystem
+namespace CreAtom
 {
     public enum AtomFamily
     {
@@ -9,7 +8,7 @@ namespace AtomSystem
         Solid = 99
     }
 
-    [CreateAssetMenu (menuName = "AtomSystem/Atom")]
+    [CreateAssetMenu (menuName = "CreAtom/Atom")]
     public class Atom : ScriptableObject
     {
         public AtomFamily family;
