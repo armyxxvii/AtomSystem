@@ -15,6 +15,10 @@ namespace CreAtom
         public List<bool> childHides = new List<bool>();
         public List<int> childIds = new List<int>();
 
+        #if UNITY_EDITOR
+        [System.NonSerialized]public bool showChild = true;
+        #endif
+
         public PartNode()
         {
             parentId = -1;
