@@ -19,5 +19,19 @@ namespace CreAtom
         {
             parentId = -1;
         }
+
+        public PartNode Clone()
+        {
+            PartNode clone = new PartNode ();
+            clone.Tpos = Tpos;
+            clone.Trot = Trot;
+            clone.part = part;
+            clone.parentId = parentId;
+            foreach (bool h in childHides)
+                clone.childHides.Add (h);
+            foreach (int i in childIds)
+                clone.childIds.Add (i);
+            return clone;
+        }
     }
 }
