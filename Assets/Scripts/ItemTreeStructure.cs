@@ -20,9 +20,6 @@ namespace CreAtom
             rootNode.part_Instance = gameObject;
             ClearPartInstance ();
             GeneratePart (rootNode, rootNode);
-            for (int i = 0; i < partNodes.Count; i++) {
-                partNodes [i].part.id = i;
-            }
         }
 
         public void Reset ()
@@ -139,8 +136,6 @@ namespace CreAtom
             Destroy (selfNode.part_Instance);
             selfNode.part_Instance = null;
             selfNode.app_Instance = null;
-
-            UpdateParts ();
         }
 
     }
