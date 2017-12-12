@@ -61,7 +61,7 @@ MonoBehaviour:
     childHides: 00
     childIds: 00000000
   partNodes:
-  - Tpos: {x: 0, y: 0, z: 0}
+  - Tpos: {x: 0, y: 0, z: 0.2}
     Trot: {x: 0, y: 0, z: 0}
     part: {fileID: 114810324785965642, guid: e2e1b6be2ac381246a91511e22b83fc2, type: 2}
     part_Instance: {fileID: 0}

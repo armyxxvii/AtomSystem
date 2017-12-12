@@ -33,8 +33,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1826001071360094}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: -7.81, y: -0.31519997, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,21 +75,5 @@ MonoBehaviour:
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 0
-    childHides: 01
-    childIds: 02000000
-  - Tpos: {x: 0, y: 0, z: 0}
-    Trot: {x: 0, y: 0, z: 0}
-    part: {fileID: 114810324785965642, guid: 7c86ed302dce7fd4c819c05f3162cfd5, type: 2}
-    part_Instance: {fileID: 0}
-    app_Instance: {fileID: 0}
-    parentId: 1
-    childHides: 01
-    childIds: 03000000
-  - Tpos: {x: 0, y: 0, z: 0}
-    Trot: {x: 0, y: 0, z: 0}
-    part: {fileID: 114810324785965642, guid: 7c86ed302dce7fd4c819c05f3162cfd5, type: 2}
-    part_Instance: {fileID: 0}
-    app_Instance: {fileID: 0}
-    parentId: 2
     childHides: 
     childIds: 

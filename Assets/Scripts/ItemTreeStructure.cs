@@ -52,9 +52,8 @@ namespace CreAtom
         public bool isGenerateComplate ()
         {
             bool check = true;
-            foreach (var pn in partNodes) {
+            foreach (var pn in partNodes)
                 check &= pn.part_Instance != null;
-            }
             return check;
         }
 
