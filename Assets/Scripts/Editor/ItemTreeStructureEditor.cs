@@ -55,7 +55,8 @@ namespace CreAtom
             EditorGUILayout.PropertyField (p_partNodes.GetArrayElementAtIndex (index));
             Rect r = GUILayoutUtility.GetLastRect ();
             EditorGUI.LabelField (r, index.ToString (), EditorStyles.boldLabel);
-            its.partNodes [index].showChild = EditorGUI.Foldout (r, its.partNodes [index].showChild, "");
+            if (its.partNodes [index].childIds.Count > 0)
+                its.partNodes [index].showChild = EditorGUI.Foldout (r, its.partNodes [index].showChild, "");
         }
 
     }
