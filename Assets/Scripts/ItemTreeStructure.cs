@@ -14,20 +14,41 @@ namespace CreAtom
         public List<PartNode> partNodes;
         [System.NonSerialized]List<PartNode> partNodes_backup;
 
+        public PartNode GetNode(int index)
+        {
+            if (index < 0)
+                return rootNode;
+            if (index > partNodes.Count)
+                return null;
+            return partNodes [index];
+        }
+
+        bool isGenerateComplate;
+
+        public bool IsGenerateComplate {
+            get {
+                return isGenerateComplate;
+            }
+        }
+
         void Start ()
         {
+            isGenerateComplate = false;
             Backup ();
             rootNode.part_Instance = gameObject;
             ClearPartInstance ();
-            GeneratePart (rootNode, rootNode);
+            GenerateTree (rootNode, rootNode);
+            isGenerateComplate = true;
         }
 
-        public void Reset ()
+        public void Restart ()
         {
+            isGenerateComplate = false;
             ClearPartInstance ();
             Restore ();
             rootNode.part_Instance = gameObject;
-            GeneratePart (rootNode, rootNode);
+            GenerateTree (rootNode, rootNode);
+            isGenerateComplate = true;
         }
 
         void Backup ()
@@ -46,14 +67,6 @@ namespace CreAtom
                 partNodes.Add (pn.Clone ());
         }
 
-        public bool isGenerateComplate ()
-        {
-            bool check = true;
-            foreach (var pn in partNodes)
-                check &= pn.part_Instance != null;
-            return check;
-        }
-
         void ClearPartInstance ()
         {
             foreach (PartNode pn in partNodes) {
@@ -62,7 +75,7 @@ namespace CreAtom
             }
         }
 
-        void GeneratePart (PartNode _partNode, PartNode _rootNode, bool _isHide = false)
+        void GenerateTree (PartNode _partNode, PartNode _rootNode, bool _isHide = false)
         {
             //Generate _partNode
             if (_partNode.part) {
@@ -77,22 +90,13 @@ namespace CreAtom
                     _partNode.app_Instance = CreatePart (Vector3.zero, Vector3.zero, _partNode.part.appearance, _partNode.part_Instance);
                     _partNode.app_Instance.SetActive (!_isHide);
                 }
-
-                // Part inside Art
-//                if (_partNode.part.appearance) {
-//                    _partNode.app_Instance = Create (_partNode.part.appearance, _rootNode.app_Instance);
-//                    _partNode.app_Instance.SetActive (!_rootNode.hideChild);
-//                }
-//                _partNode.part_Instance = Create (_partNode.part.gameObject, _partNode.app_Instance);
-//                _partNode.part = _partNode.part_Instance.GetComponent<ItemPart> ();
-//                _partNode.part_Instance.SetActive (!_rootNode.hideChild);
             }
 
             //Generate _partNode.Childs
             for (int i = 0; i < _partNode.childIds.Count; i++) {
-                PartNode cNode = partNodes [_partNode.childIds[i]];
+                PartNode cNode = GetNode(_partNode.childIds [i]);
                 bool cHide = _partNode.childHides [i];
-                GeneratePart (cNode, _partNode, cHide);
+                GenerateTree (cNode, _partNode, cHide);
             }
         }
 
@@ -111,28 +115,35 @@ namespace CreAtom
         {
             //get self partnode & id
             int id = partNodes.FindIndex (p => p.part == _part);
-            PartNode selfNode = id < 0 ? rootNode : partNodes [id];
+            PartNode selfNode = GetNode(id);
 
             //get parent partnode & id
             int pid = id < 0 ? -1 : selfNode.parentId;
-            PartNode parentNode = pid < 0 ? rootNode : partNodes [pid];
+            PartNode parentNode = GetNode(pid);
 
             //relink child to parent
             foreach (int i in selfNode.childIds) {
-                if (!partNodes [i].part_Instance) {
-                    Debug.LogWarning (partNodes [i].part.name + "[" + i + "] missing!!!");
+                PartNode childNode = GetNode (i);
+                if (childNode==null || !childNode.part_Instance) {
+                    Debug.LogWarning ("Node[" + i + "] is missing!!!");
                     continue;
                 }
-                if (!parentNode.childIds.Contains (i))
+                if (!parentNode.childIds.Contains (i)) {
                     parentNode.childIds.Add (i);
-                partNodes [i].parentId = pid;
-                partNodes [i].part_Instance.transform.parent = parentNode.part_Instance.transform;
-                partNodes [i].app_Instance.SetActive (true);
-                partNodes [i].part_Instance.SetActive (true);
+                    parentNode.childHides.Add (false);
+                }
+                childNode.parentId = pid;
+                childNode.part_Instance.transform.parent = parentNode.part_Instance.transform;
+                childNode.app_Instance.SetActive (true);
+                childNode.part_Instance.SetActive (true);
             }
 
             // clear self
-            parentNode.childIds.Remove (id);
+            int index = parentNode.childIds.FindIndex (val => val == id);
+            if (index > -1) {
+                parentNode.childIds.RemoveAt (index);
+                parentNode.childHides.RemoveAt (index);
+            }
             Destroy (selfNode.part_Instance);
             selfNode.part_Instance = null;
             selfNode.app_Instance = null;

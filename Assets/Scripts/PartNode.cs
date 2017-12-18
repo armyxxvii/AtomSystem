@@ -21,7 +21,14 @@ namespace CreAtom
 
         public PartNode()
         {
+            Tpos = Vector3.zero;
+            Trot = Vector3.zero;
+            part = null;
+            part_Instance = null;
+            app_Instance = null;
             parentId = -1;
+            childHides = new List<bool> ();
+            childIds = new List<int> ();
         }
 
         public PartNode Clone()
