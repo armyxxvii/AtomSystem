@@ -32,27 +32,27 @@ namespace CreAtom
 
             //Title
             _rect.y -= 2;
-            EditorGUI.DrawRect (_rect, new Color (0.1f, 0.5f, 0.5f, 0.2f));
+            GUI.Box (_rect, "", "helpbox");
             _rect.y += 2;
 
             _rect.height = row;
-            _rect.x += indent;
-            _rect.width -= indent;
+            _rect.x += indent + row - 4;
+            _rect.width -= indent + row;
             EditorGUI.PropertyField (_rect, p_part, new GUIContent (""));
 
             Rect _rectI = new Rect (
-                              _rect.x + _rect.width - row,
-                              _rect.y,
-                              row,
-                              _rect.height
+                              _rect.x - row + 2,
+                              _rect.y + 2,
+                              row - 3,
+                              row - 3
                           );
             GameObject pI_obj = p_part_Instance.objectReferenceValue as GameObject;
-            bool pI_Show = pI_obj != null && pI_obj.activeSelf;
+            bool pI_Show = pI_obj != null && pI_obj.activeInHierarchy;
             GUIContent pI_content = new GUIContent ("", pI_Show ? "Show" : "Hide");
             GUI.Box (_rectI, pI_content, pI_Show ? "WinBtnMinMac" : "WinBtnInactiveMac");
 
-            _rect.x -= indent;
-            _rect.width += indent;
+            _rect.x -= indent + row - 6;
+            _rect.width += indent + row - 4;
 
             //Transform
             Rect _rectColT = new Rect (
@@ -102,7 +102,7 @@ namespace CreAtom
                 _rectColC.x += 3;
                 _rectColC.height -= row2;
                 SerializedProperty _int = p_childIds.GetArrayElementAtIndex (i);
-                _int.intValue = EditorGUI.DelayedIntField (_rectColC, _int.intValue, "label");
+                EditorGUI.LabelField (_rectColC, _int.intValue.ToString ());
                 _rectColC.y += row;
                 if (i < p_childHides.arraySize) {
                     SerializedProperty _bool = p_childHides.GetArrayElementAtIndex (i);
