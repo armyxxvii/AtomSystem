@@ -75,5 +75,13 @@ MonoBehaviour:
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 0
+    childHides: 01
+    childIds: 02000000
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: b94371422ebe9f841843013246b37f36, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 1
     childHides: 
     childIds: 

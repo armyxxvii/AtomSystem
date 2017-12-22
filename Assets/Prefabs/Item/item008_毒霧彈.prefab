@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4491567906181110}
-  - component: {fileID: 114691120599733922}
+  - component: {fileID: 114553489919436986}
   m_Layer: 0
   m_Name: "item008_\u6BD2\u9727\u5F48"
   m_TagString: Untagged
@@ -33,14 +33,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1826001071360094}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -7.93, y: 0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114691120599733922
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &114553489919436986
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -52,24 +52,148 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rootNode:
+    Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
     part: {fileID: 0}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
-    hideChild: 0
+    parentId: -1
+    childHides: 00
     childIds: 00000000
   partNodes:
-  - part: {fileID: 114810324785965642, guid: e2e1b6be2ac381246a91511e22b83fc2, type: 2}
+  - Tpos: {x: 0, y: 0, z: 0.2}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: e2e1b6be2ac381246a91511e22b83fc2, type: 2}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
-    hideChild: 0
+    parentId: -1
+    childHides: 00
     childIds: 01000000
-  - part: {fileID: 114810324785965642, guid: f0df7531c6bb37b4fa6d71aceff256ab, type: 2}
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: f0df7531c6bb37b4fa6d71aceff256ab, type: 2}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
-    hideChild: 0
-    childIds: 02000000
-  - part: {fileID: 114810324785965642, guid: 194ddfd44a0e139479f6bc33ac52036b, type: 2}
+    parentId: 0
+    childHides: 0101
+    childIds: 0200000003000000
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: 194ddfd44a0e139479f6bc33ac52036b, type: 2}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
-    hideChild: 0
+    parentId: 1
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: c80c8dd118d4ff14ebe252e3d872346f, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 1
+    childHides: 0101
+    childIds: 0400000005000000
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: 194ddfd44a0e139479f6bc33ac52036b, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 3
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: c80c8dd118d4ff14ebe252e3d872346f, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 3
+    childHides: 0101
+    childIds: 0600000007000000
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: 194ddfd44a0e139479f6bc33ac52036b, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 5
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: c80c8dd118d4ff14ebe252e3d872346f, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 5
+    childHides: 0101
+    childIds: 0800000009000000
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: 194ddfd44a0e139479f6bc33ac52036b, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 7
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: c80c8dd118d4ff14ebe252e3d872346f, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 7
+    childHides: 0101
+    childIds: 0a0000000b000000
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: 194ddfd44a0e139479f6bc33ac52036b, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 9
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: c80c8dd118d4ff14ebe252e3d872346f, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 9
+    childHides: 0101
+    childIds: 0c0000000d000000
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: 194ddfd44a0e139479f6bc33ac52036b, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 11
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: c80c8dd118d4ff14ebe252e3d872346f, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 11
+    childHides: 0101
+    childIds: 0e0000000f000000
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: 194ddfd44a0e139479f6bc33ac52036b, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 13
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: c80c8dd118d4ff14ebe252e3d872346f, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 13
+    childHides: 01
+    childIds: 10000000
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: 194ddfd44a0e139479f6bc33ac52036b, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 15
+    childHides: 
     childIds: 

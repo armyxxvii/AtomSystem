@@ -52,24 +52,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rootNode:
+    Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
     part: {fileID: 0}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
-    hideChild: 0
+    parentId: -1
+    childHides: 00
     childIds: 00000000
   partNodes:
-  - part: {fileID: 114810324785965642, guid: e2e1b6be2ac381246a91511e22b83fc2, type: 2}
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 0}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
-    hideChild: 0
-    childIds: 01000000
-  - part: {fileID: 114810324785965642, guid: f0df7531c6bb37b4fa6d71aceff256ab, type: 2}
-    part_Instance: {fileID: 0}
-    app_Instance: {fileID: 0}
-    hideChild: 0
-    childIds: 02000000
-  - part: {fileID: 114810324785965642, guid: 282fd77542545874a9559d0b13cf2ce1, type: 2}
-    part_Instance: {fileID: 0}
-    app_Instance: {fileID: 0}
-    hideChild: 0
+    parentId: -1
+    childHides: 
     childIds: 

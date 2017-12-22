@@ -75,8 +75,8 @@ MonoBehaviour:
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 0
-    childHides: 
-    childIds: 
+    childHides: 01
+    childIds: 1a000000
   - Tpos: {x: -0.2, y: 0, z: -0.4}
     Trot: {x: 0, y: 205, z: 0}
     part: {fileID: 114810324785965642, guid: 180b38c92c08cee4086780ef998bba63, type: 2}
@@ -91,8 +91,8 @@ MonoBehaviour:
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 2
-    childHides: 
-    childIds: 
+    childHides: 01
+    childIds: 1b000000
   - Tpos: {x: 0, y: 0, z: -0.4}
     Trot: {x: 0, y: 180, z: 0}
     part: {fileID: 114810324785965642, guid: 180b38c92c08cee4086780ef998bba63, type: 2}
@@ -107,8 +107,8 @@ MonoBehaviour:
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 4
-    childHides: 
-    childIds: 
+    childHides: 01
+    childIds: 1c000000
   - Tpos: {x: 0.2, y: 0, z: -0.4}
     Trot: {x: 0, y: 155, z: 0}
     part: {fileID: 114810324785965642, guid: 180b38c92c08cee4086780ef998bba63, type: 2}
@@ -123,8 +123,8 @@ MonoBehaviour:
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 6
-    childHides: 
-    childIds: 
+    childHides: 01
+    childIds: 1d000000
   - Tpos: {x: -0.2, y: 0, z: -0.4}
     Trot: {x: 0, y: 205, z: 0}
     part: {fileID: 114810324785965642, guid: 180b38c92c08cee4086780ef998bba63, type: 2}
@@ -139,8 +139,8 @@ MonoBehaviour:
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 8
-    childHides: 
-    childIds: 
+    childHides: 01
+    childIds: 1e000000
   - Tpos: {x: 0, y: 0, z: -0.4}
     Trot: {x: 0, y: 180, z: 0}
     part: {fileID: 114810324785965642, guid: 180b38c92c08cee4086780ef998bba63, type: 2}
@@ -155,8 +155,8 @@ MonoBehaviour:
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 10
-    childHides: 
-    childIds: 
+    childHides: 01
+    childIds: 1f000000
   - Tpos: {x: 0.2, y: 0, z: -0.4}
     Trot: {x: 0, y: 155, z: 0}
     part: {fileID: 114810324785965642, guid: 180b38c92c08cee4086780ef998bba63, type: 2}
@@ -171,8 +171,8 @@ MonoBehaviour:
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 12
-    childHides: 
-    childIds: 
+    childHides: 01
+    childIds: 20000000
   - Tpos: {x: -0.2, y: 0, z: -0.4}
     Trot: {x: 0, y: 205, z: 0}
     part: {fileID: 114810324785965642, guid: 180b38c92c08cee4086780ef998bba63, type: 2}
@@ -187,8 +187,8 @@ MonoBehaviour:
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 14
-    childHides: 
-    childIds: 
+    childHides: 01
+    childIds: 21000000
   - Tpos: {x: 0, y: 0, z: -0.4}
     Trot: {x: 0, y: 180, z: 0}
     part: {fileID: 114810324785965642, guid: 180b38c92c08cee4086780ef998bba63, type: 2}
@@ -203,8 +203,8 @@ MonoBehaviour:
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 16
-    childHides: 
-    childIds: 
+    childHides: 01
+    childIds: 22000000
   - Tpos: {x: 0.2, y: 0, z: -0.4}
     Trot: {x: 0, y: 155, z: 0}
     part: {fileID: 114810324785965642, guid: 180b38c92c08cee4086780ef998bba63, type: 2}
@@ -219,8 +219,8 @@ MonoBehaviour:
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 18
-    childHides: 
-    childIds: 
+    childHides: 01
+    childIds: 23000000
   - Tpos: {x: -0.2, y: 0, z: -0.4}
     Trot: {x: 0, y: 205, z: 0}
     part: {fileID: 114810324785965642, guid: 180b38c92c08cee4086780ef998bba63, type: 2}
@@ -235,8 +235,8 @@ MonoBehaviour:
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 20
-    childHides: 
-    childIds: 
+    childHides: 01
+    childIds: 24000000
   - Tpos: {x: 0, y: 0, z: -0.4}
     Trot: {x: 0, y: 180, z: 0}
     part: {fileID: 114810324785965642, guid: 180b38c92c08cee4086780ef998bba63, type: 2}
@@ -251,8 +251,8 @@ MonoBehaviour:
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 22
-    childHides: 
-    childIds: 
+    childHides: 01
+    childIds: 25000000
   - Tpos: {x: 0.2, y: 0, z: -0.4}
     Trot: {x: 0, y: 155, z: 0}
     part: {fileID: 114810324785965642, guid: 180b38c92c08cee4086780ef998bba63, type: 2}
@@ -267,5 +267,109 @@ MonoBehaviour:
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 24
+    childHides: 01
+    childIds: 26000000
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: b94371422ebe9f841843013246b37f36, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 1
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: b94371422ebe9f841843013246b37f36, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 3
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: b94371422ebe9f841843013246b37f36, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 5
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: b94371422ebe9f841843013246b37f36, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 7
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: b94371422ebe9f841843013246b37f36, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 9
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: b94371422ebe9f841843013246b37f36, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 11
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: b94371422ebe9f841843013246b37f36, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 13
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: b94371422ebe9f841843013246b37f36, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 15
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: b94371422ebe9f841843013246b37f36, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 17
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: b94371422ebe9f841843013246b37f36, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 19
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: b94371422ebe9f841843013246b37f36, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 21
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: b94371422ebe9f841843013246b37f36, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 23
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: b94371422ebe9f841843013246b37f36, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 25
     childHides: 
     childIds: 
