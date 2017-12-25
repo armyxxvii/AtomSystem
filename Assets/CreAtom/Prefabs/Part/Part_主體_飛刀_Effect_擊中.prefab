@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4321300681424360}
   - component: {fileID: 114810324785965642}
-  - component: {fileID: 135904294087306876}
+  - component: {fileID: 135376828192051392}
   m_Layer: 0
-  m_Name: "Part_\u4E3B\u9AD4_\u98DB\u5200"
+  m_Name: "Part_\u4E3B\u9AD4_\u98DB\u5200_Effect_\u64CA\u4E2D"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,12 +53,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  appearance: {fileID: 1400376329031386, guid: e01397e3ec0f8fe488a2ba009ab6346d, type: 2}
-  trigger: {fileID: 135904294087306876}
+  appearance: {fileID: 1772763255816038, guid: 093c33997a893104d9220dacfdf41b1c, type: 2}
+  trigger: {fileID: 135376828192051392}
   atoms:
-  - {fileID: 11400000, guid: 775fc42e7fb3e6b4995316877d4cc6a4, type: 2}
-  defaultLife: 5
---- !u!135 &135904294087306876
+  - {fileID: 11400000, guid: b22864ad7782b0340a7a7e44f72cdc32, type: 2}
+  defaultLife: 0.1
+--- !u!135 &135376828192051392
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -66,7 +66,7 @@ SphereCollider:
   m_GameObject: {fileID: 1843595352416050}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 0.05
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}

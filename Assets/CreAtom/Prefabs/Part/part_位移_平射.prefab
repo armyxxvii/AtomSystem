@@ -103,6 +103,8 @@ MonoBehaviour:
   trigger: {fileID: 135882206215922782}
   atoms:
   - {fileID: 11400000, guid: 775fc42e7fb3e6b4995316877d4cc6a4, type: 2}
+  - {fileID: 11400000, guid: b22864ad7782b0340a7a7e44f72cdc32, type: 2}
+  defaultLife: 2
 --- !u!135 &135882206215922782
 SphereCollider:
   m_ObjectHideFlags: 1

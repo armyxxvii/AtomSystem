@@ -9,16 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67c4382cb01300b40815244da2963dbb, type: 3}
-  m_Name: "Atom_\u7269\u8CEA_\u73BB\u7483"
+  m_Name: "Atom_\u7269\u8CEA_\u9ED1\u66DC\u5CA9"
   m_EditorClassIdentifier: 
   family: 99
   reactions:
-  - hitAtom: {fileID: 11400000}
-    result: 1
-    resultInt: 0
-  - hitAtom: {fileID: 11400000, guid: 4b9d0c955750fb249a82df4db211233e, type: 2}
-    result: 1
-    resultInt: 0
   - hitAtom: {fileID: 11400000, guid: 0bea6f0fa6b6dfb4b9d67177a6e2bd58, type: 2}
     result: 1
     resultInt: 0
