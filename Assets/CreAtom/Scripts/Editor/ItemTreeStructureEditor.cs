@@ -36,6 +36,8 @@ namespace CreAtom
                 for (int i = 0; i < its.rootNode.childIds.Count; i++) {
                     using (var v2 = new EditorGUILayout.VerticalScope ("textfield", GUILayout.Width (16))) {
                         its.rootNode.childIds [i] = EditorGUILayout.DelayedIntField (its.rootNode.childIds [i], "label", GUILayout.Width (18));
+                        while (its.rootNode.childHides.Count < its.rootNode.childIds.Count)
+                            its.rootNode.childHides.Add (false);
                         its.rootNode.childHides [i] = EditorGUILayout.Toggle (its.rootNode.childHides [i]);
                     }
                 }
@@ -190,6 +192,8 @@ namespace CreAtom
             PartNode n = its.GetNode (index);
             if (n == null)
                 return;
+            while (its.partNodes[index].childHides.Count < its.partNodes[index].childIds.Count)
+                its.partNodes[index].childHides.Add (false);
             if (simple) {
                 EditorGUI.indentLevel += 2;
                 EditorGUILayout.LabelField (n.part != null ? n.part.name : "None", GUILayout.Width (200));

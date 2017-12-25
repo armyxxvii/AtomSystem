@@ -69,7 +69,6 @@ namespace CreAtom
             EditorGUI.PropertyField (_rectColT, p_Trot, new GUIContent ("Rot"), true);
 
             //IDs
-            int childCount = p_childIds.arraySize;
             Rect _rectColI = new Rect (
                                  _rect.x,
                                  _rect.y + row2,
@@ -77,11 +76,12 @@ namespace CreAtom
                                  row
                              );
             EditorGUIUtility.labelWidth = 58f;
-            EditorGUI.PropertyField (_rectColI, p_parentId, new GUIContent ("ParentID"));
+            EditorGUI.LabelField (_rectColI,"ParentId : " + p_parentId.intValue);
             _rectColI.y += row2;
-            childCount = EditorGUI.DelayedIntField (_rectColI, "ChildsCnt", childCount);
+            EditorGUI.LabelField (_rectColI,"ChildsCnt : " + p_childIds.arraySize);
 
             //Child Ids
+            int childCount = p_childIds.arraySize;
             float childSpace = (_rect.width - EditorGUIUtility.labelWidth) / childCount;
             Rect _rectColC = new Rect (
                                  _rect.x + 10,
@@ -112,10 +112,6 @@ namespace CreAtom
                 _rectColC.y -= row;
             }
 
-            if (childCount != p_childIds.arraySize) {
-                p_childIds.arraySize = childCount;
-                p_childHides.arraySize = childCount;
-            }
             EditorGUI.EndProperty ();
             EditorGUI.indentLevel = defIndent;
         }

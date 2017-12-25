@@ -33,17 +33,22 @@ namespace CreAtom
 
         void Start ()
         {
-            isGenerateComplate = false;
             Backup ();
             rootNode.part_Instance = gameObject;
             ClearPartInstance ();
             GenerateTree (rootNode, rootNode);
+            for (int i = 0; i < partNodes.Count; i++) {
+                partNodes[i].part.id = i;
+            }
             isGenerateComplate = true;
         }
 
         public void Restart ()
         {
-            isGenerateComplate = false;
+            if (!isGenerateComplate) {
+                Start ();
+            } else
+                isGenerateComplate = false;
             ClearPartInstance ();
             Restore ();
             rootNode.part_Instance = gameObject;
@@ -79,7 +84,7 @@ namespace CreAtom
         {
             //Generate _partNode
             if (_partNode.part) {
-                Debug.Log ("Generate Part : " + _partNode.part.name+"\n");
+                Debug.Log ("Generate Part : " + _partNode.part.name + "\n");
                 // Art inside Part
                 _partNode.part_Instance = CreatePart (_partNode.Tpos, _partNode.Trot, _partNode.part.gameObject, _rootNode.part_Instance);
                 _partNode.part_Instance.SetActive (!_isHide);
@@ -100,6 +105,7 @@ namespace CreAtom
             }
         }
 
+        #region Part
         static GameObject CreatePart (Vector3 _position, Vector3 _rotation, GameObject _source, GameObject _root = null)
         {
             GameObject _instance = GameObject.Instantiate (_source);
@@ -111,31 +117,39 @@ namespace CreAtom
             return _instance;
         }
 
-        public void DestroyPart (ItemPart _part)
+        public void DestroyPart (ItemPart _part,bool _destroyChild = false)
         {
             //get self partnode & id
             int id = partNodes.FindIndex (p => p.part == _part);
-            PartNode selfNode = GetNode(id);
+            PartNode selfNode = GetNode (id);
 
             //get parent partnode & id
-            int pid = id < 0 ? -1 : selfNode.parentId;
-            PartNode parentNode = GetNode(pid);
+            int pId = id < 0 ? -1 : selfNode.parentId;
+            PartNode parentNode = GetNode (pId);
 
-            //relink child to parent
-            foreach (int i in selfNode.childIds) {
-                PartNode childNode = GetNode (i);
-                if (childNode==null || !childNode.part_Instance) {
-                    Debug.LogWarning ("Node[" + i + "] is missing!!!");
-                    continue;
+            if (_destroyChild) {
+                for (int i = selfNode.childIds.Count - 1; i > -1; i--) {
+                    int cId = selfNode.childIds [i];
+                    PartNode childNode = GetNode (cId);
+                    Destroy (childNode.part_Instance);
                 }
-                if (!parentNode.childIds.Contains (i)) {
-                    parentNode.childIds.Add (i);
-                    parentNode.childHides.Add (false);
+            } else {
+                //relink child to parent
+                foreach (var cId in selfNode.childIds) {
+                    PartNode childNode = GetNode (cId);
+                    if (childNode == null || !childNode.part_Instance) {
+                        Debug.LogWarning ("Node[" + cId + "] is missing!!!");
+                        continue;
+                    }
+                    if (!parentNode.childIds.Contains (cId)) {
+                        parentNode.childIds.Add (cId);
+                        parentNode.childHides.Add (false);
+                    }
+                    childNode.parentId = pId;
+                    childNode.part_Instance.transform.parent = parentNode.part_Instance.transform;
+                    childNode.app_Instance.SetActive (true);
+                    childNode.part_Instance.SetActive (true);
                 }
-                childNode.parentId = pid;
-                childNode.part_Instance.transform.parent = parentNode.part_Instance.transform;
-                childNode.app_Instance.SetActive (true);
-                childNode.part_Instance.SetActive (true);
             }
 
             // clear self
@@ -149,5 +163,14 @@ namespace CreAtom
             selfNode.app_Instance = null;
         }
 
+//        public void UpdateParts ()
+//        {
+//            for (int i = 0; i < partNodes.Count; i++) {
+//                GameObject pi = partNodes [i].part_Instance;
+//                if (pi != null)
+//                    partNodes [i].part.CheckPartLife ();
+//            }
+//        }
+        #endregion
     }
 }
