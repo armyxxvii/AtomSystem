@@ -3,3 +3,9 @@ Library/
 *.csproj
 *.userprefs
 *.sln
+Assets/Plugins.meta
+Assets/Plugins/
+Assets/Gizmos/Atom Icon.psd.meta
+Assets/Gizmos/Atom Icon.psd
+Assets/Gizmos/ItemPart Icon.psd.meta
+Assets/Gizmos/ItemPart Icon.psd
