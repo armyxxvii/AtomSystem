@@ -11,3 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67c4382cb01300b40815244da2963dbb, type: 3}
   m_Name: "Atom_\u5C4D\u9AD4\u5FA9\u6D3B"
   m_EditorClassIdentifier: 
+  family: 0
+  reactions: []

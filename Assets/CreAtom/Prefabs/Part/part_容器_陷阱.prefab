@@ -66,9 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   appearance: {fileID: 1400376329031386, guid: 90cd86d9c5c0ad64a9ef2cf1030a3b00, type: 2}
-  cols: []
   trigger: {fileID: 0}
   atoms:
   - {fileID: 11400000, guid: 0bea6f0fa6b6dfb4b9d67177a6e2bd58, type: 2}
-  setting: []
-  childs: []
+  defaultLife: 5

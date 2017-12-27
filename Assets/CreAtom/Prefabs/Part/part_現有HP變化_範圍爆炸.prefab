@@ -123,12 +123,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   appearance: {fileID: 1772763255816038, guid: d2d1808f6bd500545876a7a83525971b, type: 2}
-  cols: []
   trigger: {fileID: 135376828192051392}
   atoms:
   - {fileID: 11400000, guid: 0bea6f0fa6b6dfb4b9d67177a6e2bd58, type: 2}
-  setting: []
-  childs: []
+  defaultLife: 5
 --- !u!135 &135376828192051392
 SphereCollider:
   m_ObjectHideFlags: 1

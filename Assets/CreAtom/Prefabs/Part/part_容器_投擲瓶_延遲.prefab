@@ -75,6 +75,7 @@ MonoBehaviour:
   trigger: {fileID: 135189534349718754}
   atoms:
   - {fileID: 11400000, guid: 775fc42e7fb3e6b4995316877d4cc6a4, type: 2}
+  defaultLife: 5
 --- !u!135 &135189534349718754
 SphereCollider:
   m_ObjectHideFlags: 1

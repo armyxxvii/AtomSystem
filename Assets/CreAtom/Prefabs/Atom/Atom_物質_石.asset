@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Name: "Atom_\u7269\u8CEA_\u77F3"
   m_EditorClassIdentifier: 
   family: 99
+  reactions: []

@@ -67,8 +67,6 @@ MonoBehaviour:
   item: {fileID: 0}
   appearance: {fileID: 1400376329031386, guid: d2d1808f6bd500545876a7a83525971b, type: 2}
   trigger: {fileID: 65499299621503790}
-  hardness: 0
-  atom: {fileID: 0}
   atoms:
   - {fileID: 0}
-  setting: []
+  defaultLife: 5
