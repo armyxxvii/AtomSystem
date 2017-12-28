@@ -23,11 +23,12 @@ namespace CreAtom
                 rootNode.childIds.Add (0);
                 rootNode.childHides.Add (true);
             }
-            if (index > partNodes.Count-1)
+            if (index > partNodes.Count - 1)
                 return null;
             return partNodes [index];
         }
 
+        bool isInit;
         bool isGenerateComplate;
 
         public bool IsGenerateComplate {
@@ -38,27 +39,26 @@ namespace CreAtom
 
         void Start ()
         {
-            Backup ();
-            rootNode.part_Instance = gameObject;
-            ClearPartInstance ();
-            GenerateTree (rootNode, rootNode);
-            for (int i = 0; i < partNodes.Count; i++) {
-                partNodes[i].part.id = i;
-            }
-            isGenerateComplate = true;
+            Restart ();
         }
 
         public void Restart ()
         {
-            if (!isGenerateComplate) {
-                Start ();
-            } else
-                isGenerateComplate = false;
-            ClearPartInstance ();
-            Restore ();
-            rootNode.part_Instance = gameObject;
+            if (!isInit) {
+                Backup ();
+                rootNode.part_Instance = gameObject;
+                ClearPartInstance ();
+                isInit = true;
+            } else {
+                ClearPartInstance ();
+                Restore ();
+                rootNode.part_Instance = gameObject;
+            }
             GenerateTree (rootNode, rootNode);
-            isGenerateComplate = true;
+            for (int i = 0; i < partNodes.Count; i++) {
+                partNodes [i].part.id = i;
+            }
+            partNodes [0].part_Instance.SetActive (true);
         }
 
         void Backup ()
