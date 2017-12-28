@@ -19,6 +19,13 @@ namespace CreAtom
 
         public override void OnInspectorGUI ()
         {
+            //check no partNode
+            if (p_partNodes.arraySize == 0) {
+                Debug.Log ("Auto add Partnodes[0].\n");
+                count = 1;
+                FixChild ();
+            }
+
             EditorGUIUtility.labelWidth = 60;
             //reset button
             if (Application.isPlaying) {
@@ -54,7 +61,7 @@ namespace CreAtom
             }
             serializedObject.ApplyModifiedProperties ();
 
-            if (!Application.isPlaying) {
+            if (!Application.isPlaying){
                 TreeSizeTool ();
                 SetParentTool ();
             }
@@ -72,29 +79,34 @@ namespace CreAtom
                     countChange = c.changed;
                 }
                 if (countChange) {
-                    if (its.partNodes.Count > count) {
-                        //ChangeArraySizeDirectly (= remove nodes)
-                        p_partNodes.arraySize = count;
-                        serializedObject.ApplyModifiedProperties ();
-                        //Search all PartNodes's childIds and delete removed Ids
-                        CleanChildId (its.rootNode);
-                        foreach (PartNode pn in its.partNodes)
-                            CleanChildId (pn);
-                    } else {
-                        var p_I = serializedObject.FindProperty ("rootNode.childIds");
-                        var p_H = serializedObject.FindProperty ("rootNode.childHides");
-                        while (count > p_partNodes.arraySize) {
-                            p_partNodes.InsertArrayElementAtIndex (p_partNodes.arraySize - 1);
-                            p_partNodes.FindPropertyRelative ("Array.data[" + (p_partNodes.arraySize - 1) + "].parentId").intValue = -1;
-                            p_I.InsertArrayElementAtIndex (p_I.arraySize - 1);
-                            p_I.GetArrayElementAtIndex (p_I.arraySize - 1).intValue = p_partNodes.arraySize - 1;
-                            p_H.InsertArrayElementAtIndex (p_H.arraySize - 1);
-                            p_H.GetArrayElementAtIndex (p_H.arraySize - 1).boolValue = true;
-                        }
-                    }
-                    serializedObject.ApplyModifiedProperties ();
+                    FixChild ();
                 }
             }
+        }
+
+        void FixChild ()
+        {
+            if (its.partNodes.Count > count) {
+                //ChangeArraySizeDirectly (= remove nodes)
+                p_partNodes.arraySize = count;
+                serializedObject.ApplyModifiedProperties ();
+                //Search all PartNodes's childIds and delete removed Ids
+                CleanChildId (its.rootNode);
+                foreach (PartNode pn in its.partNodes)
+                    CleanChildId (pn);
+            } else {
+                var p_I = serializedObject.FindProperty ("rootNode.childIds");
+                var p_H = serializedObject.FindProperty ("rootNode.childHides");
+                while (count > p_partNodes.arraySize) {
+                    p_partNodes.InsertArrayElementAtIndex (p_partNodes.arraySize < 1 ? 0 : p_partNodes.arraySize - 1);
+                    p_partNodes.FindPropertyRelative ("Array.data[" + (p_partNodes.arraySize - 1) + "].parentId").intValue = -1;
+                    p_I.InsertArrayElementAtIndex (p_I.arraySize < 1 ? 0 : p_I.arraySize - 1);
+                    p_I.GetArrayElementAtIndex (p_I.arraySize - 1).intValue = p_partNodes.arraySize - 1;
+                    p_H.InsertArrayElementAtIndex (p_H.arraySize < 1 ? 0 : p_H.arraySize - 1);
+                    p_H.GetArrayElementAtIndex (p_H.arraySize - 1).boolValue = true;
+                }
+            }
+            serializedObject.ApplyModifiedProperties ();
         }
 
         void CleanChildId (PartNode pn)

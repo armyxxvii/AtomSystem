@@ -18,7 +18,12 @@ namespace CreAtom
         {
             if (index < 0)
                 return rootNode;
-            if (index > partNodes.Count)
+            if (partNodes.Count == 0) {
+                partNodes.Add (new PartNode ());
+                rootNode.childIds.Add (0);
+                rootNode.childHides.Add (true);
+            }
+            if (index > partNodes.Count-1)
                 return null;
             return partNodes [index];
         }
