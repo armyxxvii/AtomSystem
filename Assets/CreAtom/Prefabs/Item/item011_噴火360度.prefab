@@ -33,13 +33,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1826001071360094}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.68, y: 1, z: 0.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &114691120599733922
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,19 +52,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rootNode:
+    Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
     part: {fileID: 0}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
-    hideChild: 0
+    parentId: -1
+    childHides: 00
     childIds: 00000000
   partNodes:
-  - part: {fileID: 114176065614138656, guid: 1b7668a12f1d7184f9ec73b1f9aaa76d, type: 2}
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114176065614138656, guid: 1b7668a12f1d7184f9ec73b1f9aaa76d, type: 2}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
-    hideChild: 0
-    childIds: 01000000
-  - part: {fileID: 114176065614138656, guid: 9d217d140c485904582095df18a592be, type: 2}
+    parentId: -1
+    childHides: 0101
+    childIds: 0100000002000000
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: 2c05a93559357fb499ae828d3b33af17, type: 2}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
-    hideChild: 0
+    parentId: -1
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: 6d2ca741f08356b45bc2b4e9dcbdfd76, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 0
+    childHides: 00
+    childIds: 03000000
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114176065614138656, guid: 9d217d140c485904582095df18a592be, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 2
+    childHides: 0000
+    childIds: 0400000005000000
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 0, z: 0}
+    part: {fileID: 114810324785965642, guid: a4a2e18aaa0be094b8c27a782d6a688d, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 3
+    childHides: 
+    childIds: 
+  - Tpos: {x: 0, y: 0, z: 0}
+    Trot: {x: 0, y: 180, z: 0}
+    part: {fileID: 114810324785965642, guid: bb3bb813426fd3e4faa099eb4f6fb97f, type: 2}
+    part_Instance: {fileID: 0}
+    app_Instance: {fileID: 0}
+    parentId: 3
+    childHides: 
     childIds: 
