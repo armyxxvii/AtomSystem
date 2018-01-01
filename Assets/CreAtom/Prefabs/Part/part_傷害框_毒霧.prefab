@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4321300681424360}
   - component: {fileID: 114810324785965642}
   - component: {fileID: 135358323239866692}
-  - component: {fileID: 95181215967702074}
   - component: {fileID: 54839454856028076}
+  - component: {fileID: 111365705176886012}
   m_Layer: 0
   m_Name: "part_\u50B7\u5BB3\u6846_\u6BD2\u9727"
   m_TagString: Untagged
@@ -58,23 +58,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &95181215967702074
-Animator:
-  serializedVersion: 3
+--- !u!111 &111365705176886012
+Animation:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1843595352416050}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a95d0669ccf26a649a86684b14da2692, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 7cc574f48eee1394fb3e4dbd32b270fd, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7cc574f48eee1394fb3e4dbd32b270fd, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 1
+  m_CullingType: 0
 --- !u!114 &114810324785965642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,7 +88,8 @@ MonoBehaviour:
   appearance: {fileID: 1435374039140588, guid: 9218768d0cd59424787b62e3ed937c65, type: 2}
   trigger: {fileID: 135358323239866692}
   atoms:
-  - {fileID: 11400000, guid: 0bea6f0fa6b6dfb4b9d67177a6e2bd58, type: 2}
+  - {fileID: 11400000, guid: 4475b964ff3c1de4a952bc341c370158, type: 2}
+  - {fileID: 11400000, guid: b22864ad7782b0340a7a7e44f72cdc32, type: 2}
   defaultLife: 12
 --- !u!135 &135358323239866692
 SphereCollider:
@@ -100,7 +99,7 @@ SphereCollider:
   m_GameObject: {fileID: 1843595352416050}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
