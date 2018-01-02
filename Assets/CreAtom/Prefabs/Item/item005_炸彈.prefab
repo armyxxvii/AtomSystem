@@ -67,21 +67,21 @@ MonoBehaviour:
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: -1
-    childHides: 00
-    childIds: 01000000
+    childHides: 0001
+    childIds: 0100000002000000
   - Tpos: {x: 0, y: 0, z: 0}
     Trot: {x: 0, y: 0, z: 0}
     part: {fileID: 114810324785965642, guid: f0df7531c6bb37b4fa6d71aceff256ab, type: 2}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 0
-    childHides: 01
-    childIds: 02000000
+    childHides: 
+    childIds: 
   - Tpos: {x: 0, y: 0, z: 0}
     Trot: {x: 0, y: 0, z: 0}
     part: {fileID: 114810324785965642, guid: 48ff2f02ae3c24447a496bea1d9312c3, type: 2}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
-    parentId: 1
+    parentId: 0
     childHides: 
     childIds: 

@@ -33,13 +33,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1826001071360094}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -7.93, y: 0.22, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114553489919436986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -67,45 +67,29 @@ MonoBehaviour:
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: -1
-    childHides: 00
-    childIds: 01000000
+    childHides: 0100
+    childIds: 0200000001000000
   - Tpos: {x: 0, y: 0, z: 0}
     Trot: {x: 0, y: 0, z: 0}
     part: {fileID: 114810324785965642, guid: f0df7531c6bb37b4fa6d71aceff256ab, type: 2}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
     parentId: 0
-    childHides: 0101
-    childIds: 0200000003000000
-  - Tpos: {x: 0, y: 0, z: 0}
-    Trot: {x: 0, y: 0, z: 0}
-    part: {fileID: 114810324785965642, guid: 194ddfd44a0e139479f6bc33ac52036b, type: 2}
-    part_Instance: {fileID: 0}
-    app_Instance: {fileID: 0}
-    parentId: 1
     childHides: 
     childIds: 
-  - Tpos: {x: 0, y: 0, z: 0}
+  - Tpos: {x: 0, y: 0.5, z: 0}
     Trot: {x: 0, y: 0, z: 0}
-    part: {fileID: 0}
+    part: {fileID: 114810324785965642, guid: bbdce96338474964eb5fb6ac0eaf52a9, type: 2}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
-    parentId: 1
+    parentId: 0
     childHides: 01
-    childIds: 04000000
+    childIds: 03000000
   - Tpos: {x: 0, y: 0, z: 0}
     Trot: {x: 0, y: 0, z: 0}
-    part: {fileID: 114810324785965642, guid: 48ff2f02ae3c24447a496bea1d9312c3, type: 2}
+    part: {fileID: 114810324785965642, guid: bbdce96338474964eb5fb6ac0eaf52a9, type: 2}
     part_Instance: {fileID: 0}
     app_Instance: {fileID: 0}
-    parentId: 3
-    childHides: 01
-    childIds: 05000000
-  - Tpos: {x: 0, y: 0, z: 0}
-    Trot: {x: 0, y: 0, z: 0}
-    part: {fileID: 114810324785965642, guid: 48ff2f02ae3c24447a496bea1d9312c3, type: 2}
-    part_Instance: {fileID: 0}
-    app_Instance: {fileID: 0}
-    parentId: 4
+    parentId: 2
     childHides: 
     childIds: 
