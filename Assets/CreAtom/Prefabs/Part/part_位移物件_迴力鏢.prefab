@@ -20,7 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4321300681424360}
   - component: {fileID: 114810324785965642}
-  - component: {fileID: 65499299621503790}
+  - component: {fileID: 65463858032072484}
+  - component: {fileID: 111597833239723018}
   m_Layer: 0
   m_Name: "part_\u4F4D\u79FB\u7269\u4EF6_\u8FF4\u529B\u93E2"
   m_TagString: Untagged
@@ -41,18 +42,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &65499299621503790
+--- !u!65 &65463858032072484
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1843595352416050}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 0.2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.05, y: 0.05, z: 0.05}
+  m_Center: {x: 0, y: 0, z: 0.3}
+--- !u!111 &111597833239723018
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843595352416050}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 01d826b82f58048488a00b0163806221, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 01d826b82f58048488a00b0163806221, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114810324785965642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,7 +82,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   appearance: {fileID: 1400376329031386, guid: 26f7260a704eaa84c8f5ec59fe453801, type: 2}
-  trigger: {fileID: 65499299621503790}
+  trigger: {fileID: 65463858032072484}
   atoms:
-  - {fileID: 11400000, guid: 775fc42e7fb3e6b4995316877d4cc6a4, type: 2}
-  defaultLife: 5
+  - {fileID: 11400000, guid: 0bea6f0fa6b6dfb4b9d67177a6e2bd58, type: 2}
+  - {fileID: 11400000, guid: b22864ad7782b0340a7a7e44f72cdc32, type: 2}
+  defaultLife: 10

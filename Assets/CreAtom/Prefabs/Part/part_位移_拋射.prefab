@@ -102,8 +102,7 @@ MonoBehaviour:
   appearance: {fileID: 1435374039140588, guid: 2bbc56cb69e172c449f7620ede9d1def, type: 2}
   trigger: {fileID: 135856358716817732}
   atoms:
-  - {fileID: 11400000, guid: 775fc42e7fb3e6b4995316877d4cc6a4, type: 2}
-  - {fileID: 11400000, guid: b22864ad7782b0340a7a7e44f72cdc32, type: 2}
+  - {fileID: 11400000, guid: 4cb3c003311905d4a980332baa53412e, type: 2}
   defaultLife: 5
 --- !u!135 &135856358716817732
 SphereCollider:

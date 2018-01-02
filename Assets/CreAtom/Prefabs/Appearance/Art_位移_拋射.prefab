@@ -54,7 +54,7 @@ TrailRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 49651fc0846e8634690fb3b96ea04d5a, type: 2}
+  - {fileID: 2100000, guid: 90b318f4b002b6148997c0f00da7b878, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87,23 +87,23 @@ TrailRenderer:
         tangentMode: 0
       - serializedVersion: 2
         time: 1
-        value: 0.012345687
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+        value: 0.5762712
+        inSlope: -0.42991462
+        outSlope: -0.42991462
+        tangentMode: 34
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 0
     colorGradient:
       key0:
         serializedVersion: 2
-        rgba: 4294967295
+        rgba: 2155398655
       key1:
         serializedVersion: 2
-        rgba: 16777215
+        rgba: 6827776
       key2:
         serializedVersion: 2
-        rgba: 0
+        rgba: 6827776
       key3:
         serializedVersion: 2
         rgba: 0
@@ -121,7 +121,7 @@ TrailRenderer:
         rgba: 0
       ctime0: 0
       ctime1: 65535
-      ctime2: 0
+      ctime2: 65535
       ctime3: 0
       ctime4: 0
       ctime5: 0
@@ -129,7 +129,7 @@ TrailRenderer:
       ctime7: 0
       atime0: 0
       atime1: 65535
-      atime2: 0
+      atime2: 43517
       atime3: 0
       atime4: 0
       atime5: 0

@@ -13,6 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   family: 99
   reactions:
+  - hitAtom: {fileID: 11400000, guid: 187fbe4327b391a4b8fed3bf5b6702a8, type: 2}
+    result: 1
+    resultInt: 0
+  - hitAtom: {fileID: 11400000, guid: be348678da1da4f45a8970e62f5d54c3, type: 2}
+    result: 1
+    resultInt: 0
   - hitAtom: {fileID: 11400000, guid: 0bea6f0fa6b6dfb4b9d67177a6e2bd58, type: 2}
     result: 1
     resultInt: 0

@@ -2510,10 +2510,10 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 2155398655
         key1:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 7915007
         key2:
           serializedVersion: 2
           rgba: 10868991
@@ -2542,7 +2542,7 @@ ParticleSystem:
         ctime7: 0
         atime0: 0
         atime1: 65535
-        atime2: 0
+        atime2: 65535
         atime3: 0
         atime4: 0
         atime5: 0
@@ -2599,7 +2599,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       minMaxState: 1
     widthOverTrail:
-      scalar: 0.05
+      scalar: 0.1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2745,7 +2745,7 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 2100000, guid: 07b3ad05baa828c40bc6055021c6b6f2, type: 2}
+  - {fileID: 2100000, guid: 90b318f4b002b6148997c0f00da7b878, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
