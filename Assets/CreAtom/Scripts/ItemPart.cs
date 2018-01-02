@@ -75,11 +75,12 @@ namespace CreAtom
 
         public void CheckPartLife ()
         {
+            if (item == null)
+                return;
             if (isCheckEmpty) {
                 bool isempty = true;
                 foreach (int i in item.GetNode(id).childIds) {
-                    if (item.GetNode (i).part_Instance)
-                        isempty = false;
+                    isempty &= item.GetNode (i).part_Instance == null;
                 }
                 if (isempty) {
                     Debug.Log ("<" + GetInstanceID () + "><color=red>" + name + "</color> was destroyed because of no childs \n");
@@ -149,17 +150,22 @@ namespace CreAtom
         {
             if (!isSolid)
                 return;
-            bool destroyFlag = false;
+            if(item && _hitPart.item)
+                Debug.Log ("<color=green>" + _hitPart.item.name + " HIT " + item.name + "</color>\n");
+            AtomResult totalResult = (AtomResult)0;
             foreach (var atomA in atoms) {
                 foreach (Atom atomB in _hitPart.atoms) {
-                    destroyFlag |= atomA.Hit (atomB) == AtomResult.destroy;
+                    totalResult |= atomA.Hit (atomB);
                 }
             }
 
-            if (destroyFlag) {
+            if ((totalResult & AtomResult.destroy) > 0) {
                 Debug.Log ("<" + GetInstanceID () + "><color=red>" + name + "</color> was destroyed by " +
                 "<" + _hitPart.GetInstanceID () + "><color=orange>" + _hitPart.name + "</color>\n");
-                DestroySelf ();
+                if ((totalResult & AtomResult.destroychild) > 0)
+                    DestroySelfAndChild ();
+                else
+                    DestroySelf ();
             }
         }
 

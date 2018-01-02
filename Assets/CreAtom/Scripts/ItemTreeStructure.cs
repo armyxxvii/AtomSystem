@@ -58,7 +58,6 @@ namespace CreAtom
             for (int i = 0; i < partNodes.Count; i++) {
                 partNodes [i].part.id = i;
             }
-            partNodes [0].part_Instance.SetActive (true);
         }
 
         void Backup ()

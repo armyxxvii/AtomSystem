@@ -16,8 +16,9 @@ namespace CreAtom
     {
         nothing = 0,
         destroy = 1 << 0,
-        checkempty = 1 << 1,
-        degrade = 1 << 2,
+        destroychild = 1 << 1,
+        checkempty = 1 << 10,
+        degrade = 1 << 20,
     }
 
     [CreateAssetMenu (menuName = "CreAtom/Atom")]
