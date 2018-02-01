@@ -69,4 +69,5 @@ MonoBehaviour:
   trigger: {fileID: 65261989941398392}
   atoms:
   - {fileID: 11400000, guid: 775fc42e7fb3e6b4995316877d4cc6a4, type: 2}
-  defaultLife: 5
+  - {fileID: 11400000, guid: b22864ad7782b0340a7a7e44f72cdc32, type: 2}
+  defaultLife: 30
