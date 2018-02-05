@@ -31,7 +31,7 @@ namespace CreAtom
             public AtomResult result;
             public int resultInt;
         }
-
+        public AtomType type;
         public AtomFamily family;
         public List<Reaction> reactions;
 
