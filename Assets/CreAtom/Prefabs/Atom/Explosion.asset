@@ -9,7 +9,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67c4382cb01300b40815244da2963dbb, type: 3}
-  m_Name: "Atom_\u7269\u8CEA_\u77F3"
+  m_Name: Explosion
   m_EditorClassIdentifier: 
-  family: 99
-  reactions: []
+  gives:
+  - code: 52
+    element: 3
+    type: 4
+    typeMask: 0
+  - code: 56
+    element: 3
+    type: 8
+    typeMask: 0
+  takes:
+  - code: 61
+    element: 3
+    type: 13
+    typeMask: 0
+  - code: 62
+    element: 3
+    type: 14
+    typeMask: 0
