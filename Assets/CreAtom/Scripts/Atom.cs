@@ -12,9 +12,7 @@ namespace CreAtom
             public int code;
             public int element;
             public int type;
-            public int typeMask;
         }
-//        public AtomType type;
 
         public Reaction[] gives;
         public Reaction[] takes;

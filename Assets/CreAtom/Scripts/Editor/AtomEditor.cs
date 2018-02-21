@@ -19,14 +19,14 @@ namespace CreAtom
 
     [System.Flags] public enum ReactionType
     {
-        持續狀態 = 1 << 0,
         //ContinuousSymptom
-        持續傷害 = 1 << 1,
+        持續狀態 = 1 << 0,
         //ContinuousDamage
-        瞬間狀態 = 1 << 2,
+        持續傷害 = 1 << 1,
         //InstantSymptom
-        瞬間傷害 = 1 << 3,
+        瞬間狀態 = 1 << 2,
         //InstantDamage
+        瞬間傷害 = 1 << 3,
     }
 
     [CustomEditor (typeof(Atom))]
@@ -85,7 +85,6 @@ namespace CreAtom
             SerializedProperty _code = _reaction.FindPropertyRelative ("code");
             SerializedProperty _element = _reaction.FindPropertyRelative ("element");
             SerializedProperty _type = _reaction.FindPropertyRelative ("type");
-            SerializedProperty _typeMask = _reaction.FindPropertyRelative ("typeMask");
             bool[] rs = new bool[4];
             Element enum_element = (Element)_element.intValue;
             int int_reactionType = 0;
@@ -126,8 +125,8 @@ namespace CreAtom
                     }
                 }
             
-                string requestName = _element.intValue == -1 ? "" : RequestTypeName.names [int_reactionType + _element.intValue * 16];
-                EditorGUILayout.LabelField (/*"反應"*/"", requestName, "tl selectionbutton");
+                string requestName = _element.intValue == -1 ? "" : RequestTypeName.names [_code.intValue];
+                EditorGUILayout.SelectableLabel (requestName + " (" + (RequestType)_code.intValue + ")", "tl selectionbutton");
             }
         }
 

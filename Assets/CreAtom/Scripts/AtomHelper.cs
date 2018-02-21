@@ -7,23 +7,20 @@ public static class AtomHelper
     public static RequestType[] Collision (ItemPart taker, ItemPart giver)
     {
         List<RequestType> rts = new List<RequestType> (8);
-        for (int i = 0; i < giver.atom.gives.Length; ++i) {
-            Atom.Reaction give = giver.atom.gives [i];
-//            int requestCode = give.element << 4;
-            for (int j = 0; j < taker.atom.takes.Length; ++j) {
-                Atom.Reaction take = taker.atom.takes [j];
-
-                if (AtomAgent.Instance != null && take.element == give.element) {
-                    int reactionCode = take.code & give.code;
-                    if (reactionCode == 0 && take.code != 0 && give.code != 0)
-                        reactionCode = -1;
-                    if (reactionCode == give.code)
-                        rts.Add ((RequestType)reactionCode);
-                        
-//                    requestCode += take.type | give.type;
+        for (int g = 0; g < giver.atoms.Count; ++g) {
+            foreach (var give in giver.atoms [g].gives) {
+                for (int t = 0; t < taker.atoms.Count; ++t) {
+                    foreach (var take in taker.atoms [t].takes) {
+                        if (AtomAgent.Instance != null && take.element == give.element) {
+                            int reactionCode = take.code & give.code;
+                            if (reactionCode == 0 && take.code != 0 && give.code != 0)
+                                reactionCode = -1;
+                            if (reactionCode == give.code)
+                                rts.Add ((RequestType)reactionCode);
+                        }
+                    }
                 }
             }
-//            rts.Add ((RequestType)requestCode);
         }
 
         return rts.ToArray ();
@@ -38,9 +35,11 @@ public static class AtomHelper
     {
         if (a_ip == null)
             return false;
-        for (int i = 0; i < a_ip.atom.takes.Length; i++)
-            if (a_ip.atom.takes [i].code == (int)AtomType.WallDeflect)
-                return true;
+        const int wallDeflect = (int)AtomType.WallDeflect;
+        for (int i = 0; i < a_ip.atoms.Count; i++)
+            for (int t = 0; t < a_ip.atoms [i].takes.Length; t++)
+                if (a_ip.atoms [i].takes [t].code == wallDeflect)
+                    return true;
         return false;
     }
 }

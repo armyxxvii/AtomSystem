@@ -18,7 +18,6 @@ namespace CreAtom
 
         [Header ("成分")]
         public List<Atom> atoms;
-        public Atom atom;
 
         void Start ()
         {
