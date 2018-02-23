@@ -11,8 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67c4382cb01300b40815244da2963dbb, type: 3}
   m_Name: _g100100_WallDeflect
   m_EditorClassIdentifier: 
-  gives:
-  - code: 36
-    element: 2
-    type: 4
-  takes: []
+  gives: 51000000
+  takes: 

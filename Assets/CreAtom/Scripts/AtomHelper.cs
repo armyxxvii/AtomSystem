@@ -11,11 +11,11 @@ public static class AtomHelper
             foreach (var give in giver.atoms [g].gives) {
                 for (int t = 0; t < taker.atoms.Count; ++t) {
                     foreach (var take in taker.atoms [t].takes) {
-                        if (AtomAgent.Instance != null && take.element == give.element) {
-                            int reactionCode = take.code & give.code;
-                            if (reactionCode == 0 && take.code != 0 && give.code != 0)
+                        if (AtomAgent.Instance != null) {
+                            int reactionCode = take & give;
+                            if (reactionCode == 0 && take != 0 && give != 0)
                                 reactionCode = -1;
-                            if (reactionCode == give.code)
+                            if (reactionCode == give)
                                 rts.Add ((RequestType)reactionCode);
                         }
                     }
@@ -31,14 +31,16 @@ public static class AtomHelper
         return a_object.GetComponent<ItemPart> () != null;
     }
 
+    static int wallDeflect = -1;
     public static bool IsDeflected (ItemPart a_ip)
     {
         if (a_ip == null)
             return false;
-        const int wallDeflect = (int)AtomType.WallDeflect;
+        if (wallDeflect == -1)
+            wallDeflect = (int)AtomType.WallDeflect;
         for (int i = 0; i < a_ip.atoms.Count; i++)
             for (int t = 0; t < a_ip.atoms [i].takes.Length; t++)
-                if (a_ip.atoms [i].takes [t].code == wallDeflect)
+                if (a_ip.atoms [i].takes [t] == wallDeflect)
                     return true;
         return false;
     }

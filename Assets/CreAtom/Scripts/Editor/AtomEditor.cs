@@ -1,39 +1,48 @@
 ﻿using UnityEditor;
 using CreAtom;
 using UnityEngine;
+using System;
 
 namespace CreAtom
 {
     public enum Element
     {
-        無效 = -1,
-        /* Ice */
-        水 = 0,
-        /* Wind */
-        風 = 1,
-        /* Earth */
-        地 = 2,
-        /* Fire */
-        火 = 3
+        無效 = 0,
+        風 = 1 << 5,
+        地 = 2 << 5,
+        火 = 3 << 5,
+        水 = 4 << 5,
     }
 
-    [System.Flags] public enum ReactionType
+    public enum ReactionType
     {
         //ContinuousSymptom
-        持續狀態 = 1 << 0,
+        持續狀態 = 0 << 3,
         //ContinuousDamage
-        持續傷害 = 1 << 1,
+        持續傷害 = 1 << 3,
         //InstantSymptom
-        瞬間狀態 = 1 << 2,
+        瞬間狀態 = 2 << 3,
         //InstantDamage
-        瞬間傷害 = 1 << 3,
+        瞬間傷害 = 3 << 3,
+    }
+
+    public enum ModifyType
+    {
+        無效,
+        非補正,
+        _解除,
+        _散播,
+        _範圍降低,
+        _範圍提昇,
+        _強度降低,
+        _強度提昇,
     }
 
     [CustomEditor (typeof(Atom))]
     public class AtomEditor : Editor
     {
         SerializedProperty p_gives, p_takes;
-        public bool showDef = true;
+        public bool showDef;
 
         void OnEnable ()
         {
@@ -46,87 +55,77 @@ namespace CreAtom
             EditorGUIUtility.labelWidth = 70;
             using (var cg = new EditorGUI.ChangeCheckScope ()) {
                 int gLength = EditorGUILayout.DelayedIntField ("GIVES :", p_gives.arraySize);
-                for (int gi = 0; gi < p_gives.arraySize; gi++)
-                    DrawReaction ("Give (" + gi + ")", p_gives.GetArrayElementAtIndex (gi));
-                if (cg.changed)
+                if (gLength != p_gives.arraySize)
                     ModifyArray (p_gives, gLength);
             }
+            for (int gi = 0; gi < p_gives.arraySize; gi++)
+                DrawReaction ("Give (" + gi + ")", p_gives.GetArrayElementAtIndex (gi));
 
             EditorGUILayout.Separator ();
 
             using (var ct = new EditorGUI.ChangeCheckScope ()) {
                 int tLength = EditorGUILayout.DelayedIntField ("TAKES :", p_takes.arraySize);
-                for (int ti = 0; ti < p_takes.arraySize; ti++)
-                    DrawReaction ("Take (" + ti + ")", p_takes.GetArrayElementAtIndex (ti));
-                if (ct.changed)
+                if (tLength != p_takes.arraySize)
                     ModifyArray (p_takes, tLength);
             }
+            for (int ti = 0; ti < p_takes.arraySize; ti++)
+                DrawReaction ("Take (" + ti + ")", p_takes.GetArrayElementAtIndex (ti));
 
             serializedObject.ApplyModifiedProperties ();
 
-            using (var v = new EditorGUILayout.VerticalScope ("helpbox")) {
-                showDef = EditorGUILayout.Foldout (showDef, "Default Inspector");
-                if (showDef)
-                    DrawDefaultInspector ();
-            }
+            showDef = EditorGUILayout.Foldout (showDef, "Default Inspector");
+            if (showDef)
+                DrawDefaultInspector ();
         }
 
         static void ModifyArray (SerializedProperty Array, int newLength)
         {
+            if (newLength == Array.arraySize)
+                return;
             if (newLength > Array.arraySize) {
-                
+                for (int i = Array.arraySize ; i < newLength; i++) {
+                    if (i >-1)
+                    Array.InsertArrayElementAtIndex (i);
+                }
             } else if (newLength < Array.arraySize) {
-                
+                for (int i = Array.arraySize - 1; i > newLength-1; i--) {
+                    if (i >-1)
+                        Array.DeleteArrayElementAtIndex (i);
+                }
             }
         }
 
         static void DrawReaction (string _name, SerializedProperty _reaction)
         {
-            SerializedProperty _code = _reaction.FindPropertyRelative ("code");
-            SerializedProperty _element = _reaction.FindPropertyRelative ("element");
-            SerializedProperty _type = _reaction.FindPropertyRelative ("type");
-            bool[] rs = new bool[4];
-            Element enum_element = (Element)_element.intValue;
-            int int_reactionType = 0;
+            Element enumE = (Element)(_reaction.intValue & 7 << 5);
+            ReactionType enumR = (ReactionType)(_reaction.intValue & 3 << 3);
+            ModifyType enumM = (ModifyType)(_reaction.intValue & 3);
 
             using (var v1 = new EditorGUILayout.VerticalScope ("helpbox")) {
                 EditorGUILayout.LabelField (_name);
-                using (var h2 = new EditorGUILayout.HorizontalScope ()) {
-                    using (var c = new EditorGUI.ChangeCheckScope ()) {
-                        using (var v3 = new EditorGUILayout.VerticalScope ()) {
-                            GUILayout.Label ("元素屬性", GUILayout.Width (66));
-                            enum_element = (Element)EditorGUILayout.EnumPopup (enum_element, "LargeButton", GUILayout.Height (49));
-                            _element.intValue = (int)enum_element;
+                using (var c = new EditorGUI.ChangeCheckScope ()) {
+                    using (var h2 = new EditorGUILayout.HorizontalScope ()) {
+                        using (var ve = new EditorGUILayout.VerticalScope ()) {
+                            GUILayout.Label ("元素屬性", GUILayout.Width (50));
+                            enumE = (Element)EditorGUILayout.EnumPopup (enumE, "DropDown");
                         }
-
-                        using (var v3 = new EditorGUILayout.VerticalScope ()) {
-                            GUILayout.Label ("反應類型", GUILayout.Width (66));
-                            using (var h4 = new EditorGUILayout.HorizontalScope ()) {
-                                for (int i = 0; i < 2; i++) {
-                                    int flag_r = 1 << i;
-                                    rs [i] = ((_type.intValue & flag_r) > 0);
-                                    rs [i] = GUILayout.Toggle (rs [i], ((ReactionType)(1 << i)).ToString (), "largebuttonMid");
-                                    int_reactionType += rs [i] ? flag_r : 0;
-                                }
-                            }
-                            using (var h4 = new EditorGUILayout.HorizontalScope ()) {
-                                for (int i = 2; i < 4; i++) {
-                                    int flag_r = 1 << i;
-                                    rs [i] = ((_type.intValue & flag_r) > 0);
-                                    rs [i] = GUILayout.Toggle (rs [i], ((ReactionType)(1 << i)).ToString (), "largebuttonMid");
-                                    int_reactionType += rs [i] ? flag_r : 0;
-                                }
-                            }
+                        using (var vr = new EditorGUILayout.VerticalScope ()) {
+                            GUILayout.Label ("反應類型", GUILayout.Width (50));
+                            enumR = (ReactionType)EditorGUILayout.EnumPopup (enumR, "DropDown");
                         }
-                        if (c.changed) {
-                            _type.intValue = int_reactionType;
-                            _code.intValue = _element.intValue == -1 ? -1 : _element.intValue << 4 | int_reactionType;
+                        using (var vm = new EditorGUILayout.VerticalScope ()) {
+                            GUILayout.Label ("補正類型", GUILayout.Width (50));
+                            enumM = (ModifyType)EditorGUILayout.EnumPopup (enumM, "DropDown");
                         }
                     }
+                    if (c.changed)
+                        _reaction.intValue = (int)enumE + (int)enumR + (int)enumM;
                 }
-            
-                string requestName = _element.intValue == -1 ? "" : RequestTypeName.names [_code.intValue];
-                EditorGUILayout.SelectableLabel (requestName + " (" + (RequestType)_code.intValue + ")", "tl selectionbutton");
+                GUILayout.Space (3f);
+                string requestName = _reaction.intValue == -1 ? "" : RequestTypeName.names [_reaction.intValue];
+                requestName += " (" + Convert.ToString (_reaction.intValue, 2).PadLeft (8, '0');
+                requestName += "_" + (RequestType)_reaction.intValue + ")";
+                EditorGUILayout.TextField ("",requestName, "dockarea");
             }
         }
 

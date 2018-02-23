@@ -9,10 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67c4382cb01300b40815244da2963dbb, type: 3}
-  m_Name: _g000001_slow
+  m_Name: _g011000_Lightning
   m_EditorClassIdentifier: 
-  gives:
-  - code: 1
-    element: 0
-    type: 1
-  takes: []
+  gives: 39000000
+  takes: 

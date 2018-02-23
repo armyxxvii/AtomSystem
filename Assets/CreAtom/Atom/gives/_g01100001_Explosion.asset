@@ -9,10 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67c4382cb01300b40815244da2963dbb, type: 3}
-  m_Name: _g100001_dizzy
+  m_Name: _g110001_Explosion
   m_EditorClassIdentifier: 
-  gives:
-  - code: 33
-    element: 2
-    type: 1
-  takes: []
+  gives: 61000000
+  takes: 

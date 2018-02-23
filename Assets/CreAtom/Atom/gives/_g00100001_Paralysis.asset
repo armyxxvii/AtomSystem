@@ -9,10 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67c4382cb01300b40815244da2963dbb, type: 3}
-  m_Name: _g010100_windInstantSymptom
+  m_Name: _g010001_Paralysis
   m_EditorClassIdentifier: 
-  gives:
-  - code: 20
-    element: 1
-    type: 4
-  takes: []
+  gives: 21000000
+  takes: 
