@@ -1,38 +1,43 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using CreAtom;
 
-public class AtomHelper
+namespace CreAtom
 {
-    public static RequestType[] Collision(ItemPart a_1, ItemPart a_2)
+    public static class AtomHelper
     {
-        List<RequestType> rts = new List<RequestType>(8);
-        AtomType a1;
-        AtomType a2;
-        for (int i = 0; i < a_1.atoms.Count; ++i)
+        public static RequestType[] Collision (Atom taker, Atom giver)
         {
-            for (int j = 0; j < a_2.atoms.Count; ++j)
-            {
-                a1 = a_1.atoms[i].type;
-                a2 = a_2.atoms[j].type;
-
-                if (AtomAgent.Instance != null)
-                {
-                    rts.Add(AtomAgent.Instance.m_maps.acts[(int)a1].m_reaction[(int)a2]);
+            List<RequestType> rts = new List<RequestType> (8);
+            for (int i = 0; i < taker.takes.Length; ++i) {
+                int atom_t = taker.takes [i] & taker.tMasks [i];
+                for (int j = 0; j < giver.gives.Length; ++j) {
+                    int atom_g = giver.gives [j] & giver.gMasks [j];
+                    if (AtomAgent.Instance != null) {
+                        rts.Add (AtomAgent.Instance.m_maps.m_reaction [atom_t & atom_g]);
+                    }
                 }
             }
+
+            return rts.ToArray ();
         }
 
-        return rts.ToArray();
-    }
+        public static bool IsAtom (GameObject a_object)
+        {
+            return a_object.GetComponent<Atom> () != null;
+        }
 
-    public static bool IsAtom(GameObject a_object)
-    {
-        return a_object.GetComponent<ItemPart>() != null;
-    }
+        public static bool IsDeflected (Atom a_ip)
+        {
+            bool isDeflected = false;
+            const int wd = (int)RequestType.DeflectRequest;
 
-    public static bool IsDeflected(ItemPart a_ip)
-    {
-        return a_ip != null && a_ip.atoms[0].type == AtomType.WallDeflect;
+            for (int i = 0; i < a_ip.takes.Length; i++) {
+                if ((a_ip.takes [i] & a_ip.tMasks [i]) == wd) {
+                    isDeflected = true;
+                    break;
+                }
+            }
+            return a_ip != null && isDeflected;
+        }
     }
 }
