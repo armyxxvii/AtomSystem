@@ -2,7 +2,7 @@
 {
     public enum RequestType
     {
-        none,
+        None,
         HitRequest,
         DeflectRequest,
         ItemHitRequest,
