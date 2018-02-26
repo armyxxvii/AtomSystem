@@ -5,35 +5,14 @@ using System;
 
 namespace CreAtom
 {
-    public enum Element
-    {
-        無效 = 0,
-//        風 = 1 << 5,
-//        地 = 2 << 5,
-//        火 = 3 << 5,
-//        水 = 4 << 5,
-    }
-
     public enum ReactionType
     {
-        HitRequest,
-        DeflectRequest,
-        ItemHitRequest,
-        SoftFlash,
+        旗標0_Hit,
+        旗標1_Deflect,
+        旗標2_ItemHit,
+        旗標3_SoftFlash,
 
         Count
-    }
-
-    public enum ModifyType
-    {
-        無效,
-//        非補正,
-//        _解除,
-//        _散播,
-//        _範圍降低,
-//        _範圍提昇,
-//        _強度降低,
-//        _強度提昇,
     }
 
     [CustomEditor (typeof(Atom))]

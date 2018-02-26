@@ -100,10 +100,10 @@ GameObject:
   m_Component:
   - component: {fileID: 118372025}
   - component: {fileID: 118372024}
+  - component: {fileID: 118372026}
   - component: {fileID: 118372023}
   - component: {fileID: 118372027}
   - component: {fileID: 118372022}
-  - component: {fileID: 118372026}
   - component: {fileID: 118372028}
   m_Layer: 0
   m_Name: Plane
@@ -379,10 +379,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1489932514}
   - component: {fileID: 1489932513}
+  - component: {fileID: 1489932517}
   - component: {fileID: 1489932512}
   - component: {fileID: 1489932516}
   - component: {fileID: 1489932511}
-  - component: {fileID: 1489932517}
   - component: {fileID: 1489932515}
   m_Layer: 0
   m_Name: Cube
