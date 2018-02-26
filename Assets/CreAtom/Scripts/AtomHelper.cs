@@ -8,12 +8,15 @@ namespace CreAtom
         public static RequestType[] Collision (Atom taker, Atom giver)
         {
             List<RequestType> rts = new List<RequestType> (8);
-            for (int i = 0; i < taker.takes.Length; ++i) {
-                int atom_t = taker.takes [i] & taker.tMasks [i];
-                for (int j = 0; j < giver.gives.Length; ++j) {
-                    int atom_g = giver.gives [j] & giver.gMasks [j];
+            for (int t = 0; t < taker.takes.Length; ++t) {
+                int atom_t = taker.takes [t] & taker.tMasks [t];
+                for (int g = 0; g < giver.gives.Length; ++g) {
+                    int atom = giver.gives [g] & giver.gMasks [g] & atom_t;
                     if (AtomAgent.Instance != null) {
-                        rts.Add (AtomAgent.Instance.m_maps.m_reaction [atom_t & atom_g]);
+                        for (int i = 0; i < (int)RequestType.Count; i++) {
+                            if ((atom & (1 << i)) > 0 && atom > 0)
+                                rts.Add (AtomAgent.Instance.m_maps.m_reaction [i]);
+                        }
                     }
                 }
             }

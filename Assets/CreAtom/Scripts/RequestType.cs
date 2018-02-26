@@ -2,8 +2,12 @@
 {
     public enum RequestType
     {
-        None,
+        none,
         HitRequest,
         DeflectRequest,
+        ItemHitRequest,
+        SoftFlash,
+
+        Count
     }
 }

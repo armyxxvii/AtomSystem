@@ -31,7 +31,7 @@ namespace CreAtom
 			RequestType[] rts = AtomHelper.Collision (GetComponent<Atom>(), _hitPart);
 			string log = "<b>" + name + " is hitted by " + _hitPart.name + " and get following reaction :</b>\n";
             foreach (RequestType r in rts)
-                log += "[" + (int)r + "]" + r + /*" (" + RequestTypeName.names [(int)r] + ")" + */"\n";
+                log += "[" + (int)r + "]" + r + /*" (" + (RequestTypeName)r + ")" + */"\n";
 			Debug.Log (log);
 			SendMessage ("Request", rts, SendMessageOptions.DontRequireReceiver);
 		}

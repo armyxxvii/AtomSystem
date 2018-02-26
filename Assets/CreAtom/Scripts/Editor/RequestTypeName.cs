@@ -1,12 +1,11 @@
 ﻿
 namespace CreAtom
 {
-    public static class RequestTypeName
+    public enum RequestTypeName
     {
-        public static readonly string[] names = {
-            "None",
-            "HitRequest",
-            "DeflectRequest",
-        };
+        HitRequest,
+        DeflectRequest,
+        ItemHitRequest,
+        SoftFlash,
     }
 }
