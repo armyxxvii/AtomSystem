@@ -3,11 +3,17 @@
 namespace CreAtom
 {
     [System.Serializable]
+    public struct AtomCode
+    {
+        public int[] gives;
+        public int[] gMasks;
+        public int[] takes;
+        public int[] tMasks;
+    }
+
+    [System.Serializable]
     public class Atom : MonoBehaviour
     {
-        public int[] gives = new int[1];
-        public int[] gMasks = new int[1];
-        public int[] takes = new int[1];
-        public int[] tMasks = new int[1];
+        public AtomCode atomCode;
     }
 }
