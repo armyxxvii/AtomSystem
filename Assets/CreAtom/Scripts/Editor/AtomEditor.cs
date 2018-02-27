@@ -40,8 +40,10 @@ namespace CreAtom
             else {
                 using (var cg = new EditorGUI.ChangeCheckScope ()) {
                     int gLength = EditorGUILayout.DelayedIntField ("GIVES :", p_gives.arraySize);
-                    if (gLength != p_gives.arraySize)
+                    if (gLength != p_gives.arraySize) {
                         ModifyArray (p_gives, gLength);
+                        ModifyArray (p_gMasks, gLength);
+                    }
                 }
                 for (int gi = 0; gi < p_gives.arraySize; gi++)
                     DrawReaction ("Give (" + gi + ")", p_gives.GetArrayElementAtIndex (gi),p_gMasks.GetArrayElementAtIndex (gi));
@@ -50,8 +52,10 @@ namespace CreAtom
 
                 using (var ct = new EditorGUI.ChangeCheckScope ()) {
                     int tLength = EditorGUILayout.DelayedIntField ("TAKES :", p_takes.arraySize);
-                    if (tLength != p_takes.arraySize)
+                    if (tLength != p_takes.arraySize) {
                         ModifyArray (p_takes, tLength);
+                        ModifyArray (p_tMasks, tLength);
+                    }
                 }
                 for (int ti = 0; ti < p_takes.arraySize; ti++)
                     DrawReaction ("Take (" + ti + ")", p_takes.GetArrayElementAtIndex (ti),p_tMasks.GetArrayElementAtIndex (ti));
