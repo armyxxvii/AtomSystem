@@ -5,7 +5,7 @@ namespace CreAtom
 {
     public static class AtomHelper
     {
-        public static RequestType[] Collision (Atom taker, Atom giver)
+        public static RequestType[] Collision (Atom giver, Atom taker)
         {
             List<RequestType> rts = new List<RequestType> (8);
             for (int t = 0; t < taker.takes.Length; ++t) {

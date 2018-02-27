@@ -1,7 +1,6 @@
 ﻿using UnityEditor;
 using CreAtom;
 using UnityEngine;
-using System;
 
 namespace CreAtom
 {
@@ -110,7 +109,7 @@ namespace CreAtom
                 using (var c = new EditorGUI.ChangeCheckScope ()) {
                     for (int i = 0; i < (int)ReactionType.Count; i++) {
                         using (var h2 = new EditorGUILayout.HorizontalScope ()) {
-                            a_mask [i] = EditorGUILayout.ToggleLeft ("Mask",a_mask [i],GUILayout.Width(60));
+                            a_mask [i] = EditorGUILayout.ToggleLeft ("Mask",a_mask [i],GUILayout.Width(48));
                             a_reaction [i] = EditorGUILayout.ToggleLeft (((ReactionType)i).ToString(),a_reaction [i]);
                         }
                     }
@@ -121,8 +120,8 @@ namespace CreAtom
                 }
                 GUILayout.Space (3f);
                 using (var h2 = new EditorGUILayout.HorizontalScope ()) {
-                    EditorGUILayout.TextField ("", _mask.intValue.ToString(), "dockarea", GUILayout.Width (60));
-                    EditorGUILayout.TextField ("", _reaction.intValue.ToString(), "dockarea");
+                    EditorGUILayout.TextField ("", _mask.intValue.ToString()/*, "dockarea"*/, GUILayout.Width (48));
+                    EditorGUILayout.TextField ("", _reaction.intValue.ToString()/*, "dockarea"*/);
                 }
             }
         }
